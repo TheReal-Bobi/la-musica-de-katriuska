@@ -1,0 +1,5 @@
+{
+    "game": "(Comandos normales) k!help || (Comandos música) mk!help",
+    "prefix": "mk!",
+    "token_bot": "Privado"
+}
