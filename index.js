@@ -8,20 +8,6 @@ const client = new discord.Client({ disableMentions: 'everyone' });
 
 const { Player } = require('discord-player');
 
-const keepAlive = require('./server');
-const Monitor = require('ping-monitor');
- 
-keepAlive();
-const monitor = new Monitor({
-    website: 'https://DopeySnarlingMacroinstruction.rodrigofernnde1.repl.co',
-    title: 'Nombre',
-    interval: 30 // minutes
-});
- 
-monitor.on('up', (res) => console.log(`${res.website} está encedido.`));
-monitor.on('down', (res) => console.log(`${res.website} se ha caído - ${res.statusMessage}`));
-monitor.on('stop', (website) => console.log(`${website} se ha parado.`) );
-monitor.on('error', (error) => console.log(error));
 
 const player = new Player(client);
 client.player = player;
